@@ -1,0 +1,7 @@
+[book]
+authors = ["Fabian Martin"]
+language = "en"
+multilingual = false
+src = "src"
+title = "OxtaCloud Docs"
+default-theme = "light"

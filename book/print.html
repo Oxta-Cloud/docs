@@ -1,0 +1,468 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>OxtaCloud Docs</title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Web Hosting</li><li class="chapter-item expanded "><a href="web-hosting/log-in.html"><strong aria-hidden="true">1.</strong> Log In to Panel</a></li><li class="chapter-item expanded "><a href="web-hosting/settings.html"><strong aria-hidden="true">2.</strong> Settings</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="web-hosting/settings/domain-settings.html"><strong aria-hidden="true">2.1.</strong> Domain Settings</a></li><li class="chapter-item expanded "><a href="web-hosting/settings/site-user-settings.html"><strong aria-hidden="true">2.2.</strong> Site User Settings</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="web-hosting/settings/php/php-settings.html"><strong aria-hidden="true">2.2.1.</strong> PHP</a></li><li class="chapter-item expanded "><a href="web-hosting/settings/node/node-settings.html"><strong aria-hidden="true">2.2.2.</strong> Nodejs</a></li><li class="chapter-item expanded "><a href="web-hosting/settings/python/python-settings.html"><strong aria-hidden="true">2.2.3.</strong> Python</a></li></ol></li><li class="chapter-item expanded "><a href="web-hosting/settings/pagespeed.html"><strong aria-hidden="true">2.3.</strong> PageSpeed</a></li><li class="chapter-item expanded "><a href="web-hosting/settings/delete-site.html"><strong aria-hidden="true">2.4.</strong> Delete Site</a></li></ol></li><li class="chapter-item expanded "><a href="web-hosting/security.html"><strong aria-hidden="true">3.</strong> Security</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="web-hosting/security/ip-blocking.html"><strong aria-hidden="true">3.1.</strong> IP Blocking</a></li><li class="chapter-item expanded "><a href="web-hosting/security/bots-blocking.html"><strong aria-hidden="true">3.2.</strong> Bots Blocking</a></li><li class="chapter-item expanded "><a href="web-hosting/security/authentication.html"><strong aria-hidden="true">3.3.</strong> Basic Authentication</a></li></ol></li><li class="chapter-item expanded "><a href="web-hosting/ssh-ftp.html"><strong aria-hidden="true">4.</strong> SSH/FTP</a></li><li class="chapter-item expanded "><a href="web-hosting/file-manager.html"><strong aria-hidden="true">5.</strong> File Manager</a></li><li class="chapter-item expanded "><a href="web-hosting/cron-jobs.html"><strong aria-hidden="true">6.</strong> Cron Jobs</a></li><li class="chapter-item expanded "><a href="web-hosting/logs.html"><strong aria-hidden="true">7.</strong> Logs</a></li><li class="chapter-item expanded "><a href="web-hosting/databases.html"><strong aria-hidden="true">8.</strong> Databases</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="web-hosting/database/adding-a-database.html"><strong aria-hidden="true">8.1.</strong> Adding a Database</a></li><li class="chapter-item expanded "><a href="web-hosting/database/deleting-a-database.html"><strong aria-hidden="true">8.2.</strong> Deleting a Database</a></li><li class="chapter-item expanded "><a href="web-hosting/database/adding-a-database-user.html"><strong aria-hidden="true">8.3.</strong> Adding a Database User</a></li><li class="chapter-item expanded "><a href="web-hosting/database/deleting-a-database-user.html"><strong aria-hidden="true">8.4.</strong> Deleting a Database User</a></li><li class="chapter-item expanded "><a href="web-hosting/database/phpmyadmin.html"><strong aria-hidden="true">8.5.</strong> phpMyAdmin</a></li><li class="chapter-item expanded "><a href="web-hosting/database/exporting-a-database.html"><strong aria-hidden="true">8.6.</strong> Exporting a Database</a></li><li class="chapter-item expanded "><a href="web-hosting/database/importing-a-database.html"><strong aria-hidden="true">8.7.</strong> Importing a Database</a></li><li class="chapter-item expanded "><a href="web-hosting/database/database-backup.html"><strong aria-hidden="true">8.8.</strong> Database Backup</a></li><li class="chapter-item expanded "><a href="web-hosting/database/database-master-credentials.html"><strong aria-hidden="true">8.9.</strong> Database Master Credentials</a></li><li class="chapter-item expanded "><a href="web-hosting/database/remote-database-access.html"><strong aria-hidden="true">8.10.</strong> Remote Database Access</a></li></ol></li><li class="chapter-item expanded "><a href="web-hosting/vhost.html"><strong aria-hidden="true">9.</strong> Vhost</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OxtaCloud Docs</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="log-in-to-panel"><a class="header" href="#log-in-to-panel">Log In to Panel</a></h1>
+<p>To access our web hosting panel and have access to your services, go to the link <a href="https://cp.oxta.cloud/login">Cloud Panel Login</a></p>
+<p><img src="https://cdn.discordapp.com/attachments/1052025865803939880/1053111790201999480/image.png" alt="" /></p>
+<p>After entering the credentials we have provided you, click on Log In, then you will see your available sites.</p>
+<p><img src="https://media.discordapp.net/attachments/1052025865803939880/1053112164963057786/image.png?width=1020&amp;height=538" alt="" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="settings"><a class="header" href="#settings">Settings</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="domain-settings"><a class="header" href="#domain-settings">Domain Settings</a></h1>
+<p>In the Domain Settings, you can change your site's Root Directory. By default, the Domain Name will be used but can be changed to your needs.</p>
+<p><img src="https://www.cloudpanel.io/docs/v2/img/frontend-area/settings/domain-settings.png" alt="" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="site-user-settings"><a class="header" href="#site-user-settings">Site User Settings</a></h1>
+<p>In the Site User Settings, you can reset the password for the primary SSH User or add SSH Keys if you want to use SSH Public Key Authentication.</p>
+<p><img src="https://www.cloudpanel.io/docs/v2/img/frontend-area/settings/site-user-settings.png" alt="" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="php"><a class="header" href="#php">PHP</a></h1>
+<p>In the PHP Settings, you can change the PHP Version and change other settings like:</p>
+<ul>
+<li>memory_limit</li>
+<li>max_execution_time</li>
+<li>max_input_time</li>
+<li>max_input_vars</li>
+<li>post_max_size</li>
+<li>upload_max_filesize</li>
+</ul>
+<p>The most common settings can be modified to your needs, but you can overwrite them in the
+Additional Configuration Directives if you need to change other parameter values.</p>
+<p><img src="https://www.cloudpanel.io/docs/v2/img/frontend-area/settings/php-settings.png" alt="" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="nodejs"><a class="header" href="#nodejs">Nodejs</a></h1>
+<p>In the Node.js Settings, you can change the Node.js Version and the App Port.</p>
+<p>The App Port is used to forward NGINX traffic via reverse proxy to the Node App.</p>
+<p>The Node.js Versions are managed via <a href="https://github.com/nvm-sh/nvm">Node Version Manager</a>.</p>
+<p><strong>NODE.JS VERSION CHANGE</strong></p>
+<p>After changing the Node.js Version, log out from an active SSH Session and connect again to see the new version.</p>
+<p>Type: node -v to see the new version.</p>
+<p><img src="https://www.cloudpanel.io/docs/v2/img/frontend-area/settings/nodejs-settings.png" alt="" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="python"><a class="header" href="#python">Python</a></h1>
+<p>In the Python Settings, you can change the Python Version and the App Port.</p>
+<p>The App Port is used to forward NGINX traffic via reverse proxy to the Python App.</p>
+<p>By default, the Python Version of the operating system is installed.</p>
+<p><strong>PYTHON VERSION CHANGE</strong></p>
+<p>After changing the Python Version, log out from an active SSH Session and connect again to see the new version.</p>
+<p>Type: python --version to see the new version.</p>
+<p><img src="https://www.cloudpanel.io/docs/v2/img/frontend-area/settings/python-settings.png" alt="" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="pagespeed"><a class="header" href="#pagespeed">PageSpeed</a></h1>
+<p>CloudPanel is shipped with the <a href="https://developers.google.com/speed/pagespeed/module">Google PageSpeed Module for NGINX</a>, automatically optimizing your site for better performance.</p>
+<p>Enable the PageSpeed module for NGINX by using the switch and clicking on the button Save.</p>
+<p>You can modify the rules; see the <a href="https://www.modpagespeed.com/doc/">PageSpeed Documentation</a> for detailed information.</p>
+<p><img src="https://www.cloudpanel.io/docs/v2/img/frontend-area/settings/pagespeed.png" alt="" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="delete-site"><a class="header" href="#delete-site">Delete Site</a></h1>
+<p>To delete a site, click on the button Delete Site and confirm the action by entering the Domain Name.</p>
+<p><img src="https://www.cloudpanel.io/docs/v2/img/frontend-area/settings/delete-site.png" alt="" /></p>
+<blockquote>
+<p><strong>Warning</strong></p>
+</blockquote>
+<blockquote>
+<p>Deleting a site will permanently remove all site files, databases, users, and configs, and they will be non-recoverable.</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="security"><a class="header" href="#security">Security</a></h1>
+<p>In our dashboard you can activate security options which are</p>
+<ul>
+<li>IP Blocking</li>
+<li>Bots Blocking</li>
+<li>Basic Authentication</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ip-blocking"><a class="header" href="#ip-blocking">IP Blocking</a></h1>
+<p>In IP Blocking you can block IP's so that if that IP sends a request to your web site it will be denied.</p>
+<p><img src="https://media.discordapp.net/attachments/1052025865803939880/1053113389481725952/image.png" alt="" /></p>
+<p>To add it you must click on Add IP, then enter the IP you want to block traffic to your site.</p>
+<p><img src="https://media.discordapp.net/attachments/1052025865803939880/1053114194318344294/image.png" alt="" /></p>
+<p>Then the IP will not be able to access</p>
+<p><img src="https://media.discordapp.net/attachments/1052025865803939880/1053114385628934164/image.png" alt="" /></p>
+<p>The IP to block can entered as ipv4 or ipv6 format. Click on the button Add IP to save.</p>
+<h2 id="examples"><a class="header" href="#examples">Examples:</a></h2>
+<ul>
+<li>8.8.8.8 (ipv4)</li>
+<li>192.168.0.1/32 (ipv4 CIDR Format)</li>
+<li>2400:6180:100:d0::99b:5001 (ipv6)</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="bots-blocking"><a class="header" href="#bots-blocking">Bots Blocking</a></h1>
+<p>To block a Bot, click on the tab Bots Blocking and on the button Add Bot top right.</p>
+<p><img src="https://media.discordapp.net/attachments/1052025865803939880/1053115590740545616/image.png" alt="" /></p>
+<p>Enter the Bot Name and click on the button Add Bot to save.
+The Bot Name is case insensitive. As example: fatbot would be the same as FatBot.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="basic-authentication"><a class="header" href="#basic-authentication">Basic Authentication</a></h1>
+<p>Basic Authentication will ask for a username and password before accessing the site, you can also enter an IPS whitelist.</p>
+<p><img src="https://media.discordapp.net/attachments/1052025865803939880/1053116280229613628/image.png" alt="" /></p>
+<p>After entering the data you will be redirected to your casual page.</p>
+<p><img src="https://media.discordapp.net/attachments/1052025865803939880/1053116844363485296/image.png?width=1201&amp;height=305" alt="" />
+<img src="https://media.discordapp.net/attachments/1052025865803939880/1053116985992544337/image.png?width=1020&amp;height=538" alt="" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sshftp"><a class="header" href="#sshftp">SSH/FTP</a></h1>
+<h2 id="ssh"><a class="header" href="#ssh">SSH</a></h2>
+<p>The SSH protocol (also referred to as Secure Shell) is a method for securing remote login from one computer to another.
+It provides several alternative options for strong authentication, and it protects the communication's security and integrity with strong encryption.</p>
+<h3 id="add-user"><a class="header" href="#add-user">Add User</a></h3>
+<p>To add a new SSH User, click on the tab SSH/FTP and enter a User Name and Password and click on Add User.</p>
+<p><img src="https://media.discordapp.net/attachments/1052025865803939880/1053117886518009936/image.png" alt="" />
+<img src="https://media.discordapp.net/attachments/1052025865803939880/1053118265997656074/image.png" alt="" /></p>
+<h3 id="deleting-a-user"><a class="header" href="#deleting-a-user">Deleting a User</a></h3>
+<p>To delete an SSH User, click on the tab SSH/FTP and then on Delete and confirm your action.</p>
+<h3 id="password-change"><a class="header" href="#password-change">Password Change</a></h3>
+<p>To change the password for an SSH User, click on the tab SSH/FTP and then on the User Name.</p>
+<p>Enter a new strong Password or click on Generate new password and click on Save.</p>
+<p><img src="https://media.discordapp.net/attachments/1052025865803939880/1053118764255825950/image.png" alt="" /></p>
+<h3 id="ssh-login"><a class="header" href="#ssh-login">SSH Login</a></h3>
+<p>To login via SSH to the instance, you need a terminal like iterm2 for macOS or putty for Windows.</p>
+<p>The SSH port is 22 (default port). Before you try to connect with SSH, make sure that port 22 is open for your ip address.</p>
+<p><strong>Linux and MacOS:</strong></p>
+<p><strong>SSH login via password</strong></p>
+<p><code>ssh john-doe@instance-ip-address</code></p>
+<p><strong>SSH login via private key</strong></p>
+<p><code>ssh -i path_to_your_private_key.pem john-doe@instance-ip-address</code></p>
+<p><strong>Windows:</strong></p>
+<p>In the Host Name field, enter the instance ip address and click on the button Open.</p>
+<p><img src="https://www.cloudpanel.io/docs/v2/img/frontend-area/ssh-ftp/putty-ssh.png" alt="" /></p>
+<p>Putty will ask you to enter the User Name and Password in the next step.</p>
+<h3 id="sftp-login"><a class="header" href="#sftp-login">SFTP Login</a></h3>
+<p>To login via SFTP to the instance, you need a client like <a href="https://filezilla-project.org/">FileZilla</a>.</p>
+<p>Make sure that the SSH port 22 is open for your ip address.</p>
+<p>Enter the Host, Username, Password and Port fields and click on the button Quickconnect.</p>
+<p><strong>PORT</strong>
+Make sure to use port 22 for an SFTP connection.</p>
+<p><img src="https://www.cloudpanel.io/docs/v2/img/frontend-area/ssh-ftp/sftp-login-filezilla.png" alt="" /></p>
+<h2 id="ftp"><a class="header" href="#ftp">FTP</a></h2>
+<p>The File Transfer Protocol (FTP) is a standard network protocol used to transfer computer files between a client and server on a computer network.</p>
+<h3 id="adding-a-user"><a class="header" href="#adding-a-user">Adding a User</a></h3>
+<p>To add a new FTP User, click on the tab SSH/FTP and enter a User Name, Password, and Home Directory and click on Add User.</p>
+<p><img src="https://media.discordapp.net/attachments/1052025865803939880/1053119754744909844/image.png" alt="" /></p>
+<h3 id="deleting-a-user-1"><a class="header" href="#deleting-a-user-1">Deleting a User</a></h3>
+<p>To delete an FTP User, click on the tab SSH/FTP and then on Delete and confirm your action.</p>
+<p><img src="https://media.discordapp.net/attachments/1052025865803939880/1053119937251651664/image.png" alt="" /></p>
+<h3 id="password-change-1"><a class="header" href="#password-change-1">Password Change</a></h3>
+<p>To change the password for an FTP User, click on the tab SSH/FTP and then on the User Name.</p>
+<p>Enter a new strong Password or click on Generate new password and click on Save.</p>
+<p><img src="https://media.discordapp.net/attachments/1052025865803939880/1053120067434467338/image.png" alt="" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="file-manager"><a class="header" href="#file-manager">File Manager</a></h1>
+<p>With the File Manager, you can organize your site files with an easy-to-use graphical interface.</p>
+<p>Managing your site files is a pleasure with the File Manager. Creating new files and folders and editing files with an editor with syntax highlighting makes your work easier and faster.</p>
+<p><img src="https://media.discordapp.net/attachments/1052025865803939880/1053121256209256479/image.png?width=904&amp;height=538" alt="" /></p>
+<h2 id="features"><a class="header" href="#features">Features</a></h2>
+<ul>
+<li>Adding files and folders</li>
+<li>Drag &amp; drop file uploading</li>
+<li>Editing files in an editor with syntax highlighting</li>
+<li>Extracting Files (.zip, .tar, .gz)</li>
+<li>Compressing Files</li>
+<li>Copy &amp; Paste</li>
+<li>Changing Permissions</li>
+<li>File Downloading</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cron-jobs"><a class="header" href="#cron-jobs">Cron Jobs</a></h1>
+<p>Cron is one of the most valuable utilities that you can find in any Unix-like operating system.
+It is used to schedule commands at a specific time. These scheduled commands or tasks are known as Cron Jobs.</p>
+<h2 id="adding-a-cron-job"><a class="header" href="#adding-a-cron-job">Adding a Cron Job</a></h2>
+<p><strong>Via CloudPanel</strong></p>
+<p>To add a Cron Job, click on the Cron Jobs tab, select a Template and enter the Command you want to execute.</p>
+<p><img src="https://media.discordapp.net/attachments/1052025865803939880/1053121129071525909/image.png" alt="" /></p>
+<h3 id="via-command-line"><a class="header" href="#via-command-line">Via Command Line</a></h3>
+<p>The standard linux way to configure Cron Jobs on the command line can be used as well.</p>
+<ol>
+<li>Login via SSH with the Site User.</li>
+</ol>
+<p><code>ssh site-user@instance-ip-address</code></p>
+<ol start="2">
+<li>Enter the following command to edit Cron Jobs:</li>
+</ol>
+<p><code>crontab -e</code></p>
+<ol start="3">
+<li>Configure your Cron Job.</li>
+</ol>
+<p>On the following <a href="https://tecadmin.net/crontab-in-linux-with-20-examples-of-cron-schedule/">site</a>, you find some useful examples of how to configure them.</p>
+<h3 id="deleting-a-cron-job"><a class="header" href="#deleting-a-cron-job">Deleting a Cron Job</a></h3>
+<p>To delete a Cron Job, click on the Cron Jobs tab and click on Delete and confirm your action.</p>
+<p><img src="https://media.discordapp.net/attachments/1052025865803939880/1053121747018330203/image.png" alt="" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="logs"><a class="header" href="#logs">Logs</a></h1>
+<p>The Log Viewer provides fast access to the NGINX and PHP-FPM log files.</p>
+<p>All log files can be found on the instance as well, in the following directory: /home/$siteUser/logs/</p>
+<p><img src="https://media.discordapp.net/attachments/1052025865803939880/1053122037696168026/image.png?width=820&amp;height=539" alt="" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="databases"><a class="header" href="#databases">Databases</a></h1>
+<p>You can have full access to the databases, in the following points you will see a guide on how to do it.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="adding-a-database"><a class="header" href="#adding-a-database">Adding a Database</a></h1>
+<ol>
+<li>Click on Add Database to create a new database.</li>
+</ol>
+<p><img src="https://www.cloudpanel.io/docs/v2/img/frontend-area/databases/adding-a-database.png" alt="" /></p>
+<ol start="2">
+<li>Enter the Database Name, Database User Name, and Database User Password and click on the button Add Database.</li>
+</ol>
+<p><img src="https://www.cloudpanel.io/docs/v2/img/frontend-area/databases/add-database-form.png" alt="" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="deleting-a-database"><a class="header" href="#deleting-a-database">Deleting a Database</a></h1>
+<p>To delete a database, click on Delete and confirm your action.</p>
+<p><img src="https://www.cloudpanel.io/docs/v2/img/frontend-area/databases/deleting-a-database.png" alt="" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="adding-a-database-user"><a class="header" href="#adding-a-database-user">Adding a Database User</a></h1>
+<ol>
+<li>Click on Add Database User to add a new user to your database.</li>
+</ol>
+<p><img src="https://www.cloudpanel.io/docs/v2/img/frontend-area/databases/adding-a-database-user.png" alt="" /></p>
+<ol start="2">
+<li>Enter the Database User Name, Database User Password, and select the Database and the Permissions.</li>
+</ol>
+<p><img src="https://www.cloudpanel.io/docs/v2/img/frontend-area/databases/adding-a-database-user-form.png" alt="" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="deleting-a-database-user"><a class="header" href="#deleting-a-database-user">Deleting a Database User</a></h1>
+<p>To delete a database user, click on Delete and confirm your action.</p>
+<p><img src="https://www.cloudpanel.io/docs/v2/img/frontend-area/databases/deleting-a-database-user.png" alt="" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="phpmyadmin"><a class="header" href="#phpmyadmin">phpMyAdmin</a></h1>
+<p>To manage a database via phpMyAdmin, click on Manage, and you will be forwarded to phpMyAdmin.</p>
+<p><strong>ATENTION</strong> Do not use phpMyAdmin to export and import databases; it can destroy your database.
+Use export and import guide from below.</p>
+<p><img src="https://www.cloudpanel.io/docs/v2/img/frontend-area/databases/phpmyadmin.png" alt="" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="exporting-a-database"><a class="header" href="#exporting-a-database">Exporting a Database</a></h1>
+<p>For exporting a database, CloudPanel uses mysqldump client utility.</p>
+<p>To export a database, do the following.</p>
+<ol>
+<li>Login via SSH with the Site User.</li>
+</ol>
+<p><code>ssh site-user@instance-ip-address</code></p>
+<ol start="2">
+<li>Go to the directory where the database dump should be saved e.g., the tmp directory of the user.</li>
+</ol>
+<p><code>cd ~/tmp/</code></p>
+<ol start="3">
+<li>Run clpctl to see all available commands.</li>
+</ol>
+<p><code>clpctl</code></p>
+<p><img src="https://www.cloudpanel.io/docs/v2/img/frontend-area/databases/clpctl-user-commands.png" alt="" /></p>
+<ol start="4">
+<li>Use the following command to export a database.</li>
+</ol>
+<p><strong>COMPRESSION</strong> The database dump will be gzipped if you add .sql.gz at the end of the file name. If you want to export the database uncompressed, use .sql.</p>
+<p><code>clpctl db:export --databaseName=my-database --file=dump.sql.gz</code></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="importing-a-database"><a class="header" href="#importing-a-database">Importing a Database</a></h1>
+<p>For importing a database, CloudPanel uses mysql command-line client.</p>
+<p>To import a database, do the following.</p>
+<ol>
+<li>Login via SSH with the Site User.</li>
+</ol>
+<p><code>ssh site-user@instance-ip-address</code></p>
+<ol start="2">
+<li>Run clpctl to see all available commands.</li>
+</ol>
+<p><code>clpctl</code></p>
+<p><img src="https://www.cloudpanel.io/docs/v2/img/frontend-area/databases/clpctl-user-commands.png" alt="" /></p>
+<ol start="3">
+<li>Go to the database dump's directory and use the following command to import a database.</li>
+</ol>
+<p><code>clpctl db:import --databaseName=my-database --file=dump.sql.gz</code></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="database-backups"><a class="header" href="#database-backups">Database Backups</a></h1>
+<p>CloudPanel creates a dump of each database every night at 3:15 AM with a retention period of 7 days.</p>
+<p>All database backups can be found in the backups directory of the site user.</p>
+<p><code>/home/$site-user/backups/</code></p>
+<p>If you have smaller databases, you can change the cron job to run more frequently, like twice a day.</p>
+<p>To change the schedule of the database backup task, do the following:</p>
+<ol>
+<li>Login via SSH to your instance and become root.</li>
+</ol>
+<p><code>sudo su root</code></p>
+<ol start="2">
+<li>Open the crontab:</li>
+</ol>
+<p><code>nano /etc/cron.d/clp</code></p>
+<ol start="3">
+<li>Change the backup task schedule to your needs.</li>
+</ol>
+<p><code>15 3 * * * clp /usr/bin/bash -c &quot;/usr/bin/clpctl db:backup --ignoreDatabases='db1,db2' --retentionPeriod=7&quot; &amp;&gt; /dev/null</code></p>
+<p><strong>RETENTION PERIOD</strong>
+If you want to save the database backups for more than seven days, change the retentionPeriod value.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="database-master-credentials"><a class="header" href="#database-master-credentials">Database Master Credentials</a></h1>
+<p>To see the Master Database Credentials, do the following.</p>
+<ol>
+<li>Login via SSH to your instance and become root.</li>
+</ol>
+<p><code>sudo su root</code></p>
+<ol start="2">
+<li>Run the following command:</li>
+</ol>
+<p><code>clpctl db:show:master-credentials</code></p>
+<p>The output will look like this:</p>
+<p><img src="https://www.cloudpanel.io/docs/v2/img/frontend-area/databases/show-database-master-credentials.png" alt="" /></p>
+<p>Copy the Connect Command to get connected to your database server.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="remote-database-access"><a class="header" href="#remote-database-access">Remote Database Access</a></h1>
+<p>For a remote connection to your database, go to Firewall in the Admin Area and whitelist your IP for the MySQL port 3306 in the Firewall.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="vhost"><a class="header" href="#vhost">Vhost</a></h1>
+<p>In the Vhost Editor, you can make changes on the NGINX VHost, which allows you to apply rewrites, redirects, reverse proxies, and other settings.</p>
+<p>Under the hood, CloudPanel checks the syntax and reverts the changes to prevent downtime, and throws an error message.</p>
+<p><img src="https://www.cloudpanel.io/docs/v2/img/frontend-area/vhost/vhost-editor.png" alt="" /></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+    </body>
+</html>
